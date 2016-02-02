@@ -1,10 +1,9 @@
-FROM ubuntu:wily-20160121
+FROM daocloud.io/library/ubuntu:vivid-20160122 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-RUN apt-get install -y --reinstall software-properties-common
+RUN apt-get install -y  software-properties-common  python-software-properties
 RUN apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
 RUN apt-get update
-RUN apt-get install python-software-properties
-RUN apt-get install mosquitto
+RUN apt-get install -y mosquitto
 EXPOSE 1883
 CMD mosquitto
