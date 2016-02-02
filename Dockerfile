@@ -1,4 +1,4 @@
-FROM daocloud.io/library/ubuntu:vivid-20160122
+FROM ubuntu:wily-20160121
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN  apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
